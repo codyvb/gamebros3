@@ -13,6 +13,7 @@ import { atom, useRecoilState, useRecoilValue } from 'recoil'
 import { recoilTokensMap } from './CartMenu'
 import { useAccount, useNetwork, useSigner } from 'wagmi'
 import BuyNow from 'components/BuyNow'
+import {ENSName} from 'react-ens-name'
 
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 const SOURCE_ID = process.env.NEXT_PUBLIC_SOURCE_ID
@@ -63,13 +64,14 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
       key="tokensGridMasonry"
       breakpointCols={{
         default: 6,
+        2500: 7,
         1900: 5,
         1536: 4,
-        1280: 3,
-        1024: 2,
+        1280: 4,
+        1024: 3,
         768: 2,
         640: 2,
-        500: 1,
+        500: 2,
       }}
       className="masonry-grid"
       columnClassName="masonry-grid_column"
@@ -86,27 +88,36 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
             return (
               <div
                 key={`${token.contract}${token.tokenId}`}
-                className="group relative mb-6 grid transform-gpu self-start overflow-hidden rounded-[16px] border border-[#D4D4D4] bg-white transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-0 dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600"
+                className="group relative self-start border-2 border-[#000000] transition ease-in hover:border-[#6d6d6d] hover:ease-out dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600"
               >
-                {isInCart ? (
+                {/* {isInCart ? (
                   <div className="absolute top-4 right-4 z-10 flex h-[34px] w-[34px] animate-slide-down items-center justify-center overflow-hidden rounded-full bg-primary-700">
                     <FaShoppingCart className="h-[18px] w-[18px] text-white" />
                   </div>
-                ) : null}
+                ) : null} */}
 
                 <Link
                   key={`${token?.collection?.name}${idx}`}
                   href={`/${token?.contract}/${token?.tokenId}`}
                 >
-                  <a className="mb-[85px]">
+                  
+                  <a className="">
+                  {token?.source && (
+                    
+                    <div className='absolute z-50 top-0 left-0 h-24 w-full bg-gradient-to-b from-black to-background-opacity-0 col-span-full'>
+                                        <div className='absolute top-4 left-4 h-8 w-8 font-pixeloid'>Available! 
+  
+                      </div>
+                      </div>
+                    )}
                     {token?.image ? (
                       <Image
                         loader={({ src }) => src}
-                        src={optimizeImage(token?.image, 250)}
+                        src={optimizeImage(token?.image, 500)}
                         alt={`${token?.name}`}
-                        className="w-full"
-                        width={250}
-                        height={250}
+                        className="absolute w-full h-full"
+                        width={500}
+                        height={500}
                         objectFit="cover"
                       />
                     ) : (
@@ -134,9 +145,14 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
                         />
                       </div>
                     )}
+                  <div className='absolute z-50 bottom-0 left-0 h-24 w-full bg-gradient-to-t from-black col-span-full invisible group-hover:visible '>
+                  <div className='absolute text-xs invisible group-hover:visible bottom-5 left-3 h-2 w-8 font-pixeloid'>
+                  <ENSName address={token?.owner}></ENSName>
+                  </div>
+                  </div>
                   </a>
                 </Link>
-                <div className="absolute -bottom-[41px] w-full  bg-white transition-all group-hover:bottom-[0px] dark:bg-neutral-800">
+                {/* <div className="absolute -bottom-[41px] w-full  bg-white transition-all group-hover:bottom-[0px] dark:bg-neutral-800">
                   <div
                     className="reservoir-subtitle mb-3 overflow-hidden truncate px-4 pt-4 dark:text-white lg:pt-3"
                     title={token?.name || token?.tokenId}
@@ -204,7 +220,7 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
                       </button>
                     )}
                   </div>
-                </div>
+                </div> */}
               </div>
             )
           })}

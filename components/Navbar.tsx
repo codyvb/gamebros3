@@ -102,7 +102,7 @@ const Navbar: FC = () => {
   }, [filterableCollection])
 
   return (
-    <nav className="col-span-full flex items-center justify-between gap-2 px-6 py-4 md:gap-3 md:py-6 md:px-16">
+    <nav className="col-span-full fixed z-50 flex w-full items-center justify-between gap-2 px-6 py-4 bg-gradient-to-b from-black to-background-opacity-0 md:gap-3 md:py-12 md:px-16">
       <NavbarLogo className="z-10 max-w-[300px]" />
       {showLinks && (
         <div className="z-10 ml-12 hidden items-center gap-11 lg:flex">

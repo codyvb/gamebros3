@@ -179,12 +179,12 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           {description}
           {image}
         </Head>
-        <Hero collectionId={id} fallback={fallback} />
+        {/* <Hero collectionId={id} fallback={fallback} /> */}
         <Tabs.Root
           value={router.query?.tab?.toString() || 'items'}
           className="col-span-full grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 3xl:grid-cols-16 4xl:grid-cols-21"
         >
-          <Tabs.List className="col-span-full flex justify-center border-b border-[#D4D4D4] dark:border-[#525252]">
+          {/* <Tabs.List className="col-span-full flex justify-center border-b border-[#D4D4D4] dark:border-[#525252]">
             {tabs.map(({ name, id }) => (
               <Tabs.Trigger
                 key={id}
@@ -198,13 +198,13 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                 <span>{name}</span>
               </Tabs.Trigger>
             ))}
-          </Tabs.List>
+          </Tabs.List> */}
           <Tabs.Content value="items" asChild>
             <>
-              <Sidebar attributes={attributes} setTokensSize={tokens.setSize} />
-              <div className="col-span-full mx-6 mt-4 sm:col-end-[-1] md:col-start-4">
-                <div className="mb-4 hidden items-center justify-between md:flex">
-                  <div className="flex items-center gap-6">
+              {/* <Sidebar attributes={attributes} setTokensSize={tokens.setSize} /> */}
+              <div className="col-span-full sm:col-end-[-1] md:col-start-1">
+                <div className="mb-20 hidden items-center justify-between md:flex">
+                  <div className="hidden items-center gap-6">
                     {tokenCount > 0 && (
                       <>
                         <div>{formatNumber(tokenCount)} items</div>
@@ -219,7 +219,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                       </>
                     )}
                   </div>
-                  <div className="flex gap-4">
+                  <div className="hidden gap-4">
                     {router.query?.attribute_key ||
                     router.query?.attribute_key === '' ? (
                       <>

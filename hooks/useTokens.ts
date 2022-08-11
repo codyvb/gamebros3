@@ -75,6 +75,10 @@ const getKey: (
   let query: paths['/tokens/v4']['get']['parameters']['query'] = {
     limit: 20,
     collection: collectionId,
+        //@ts-ignore
+        sortBy: "tokenId",
+        //@ts-ignore
+        sortDirection: "desc"
   }
 
   if (index !== 0 && previousPageData.continuation !== null) {
@@ -89,7 +93,6 @@ const getKey: (
       query.sortBy = 'topBidValue'
     }
   } else {
-    query.sortBy = 'floorAskPrice'
   }
 
   // Extract all queries of attribute type
