@@ -400,9 +400,13 @@ export const getStaticProps: GetStaticProps<{
   const tokensUrl = new URL('/tokens/v4', RESERVOIR_API_BASE)
 
   let tokensQuery: paths['/tokens/v4']['get']['parameters']['query'] = {
-    collection: id,
-    sortBy: 'floorAskPrice',
     limit: 20,
+    collection: id,
+            //@ts-ignore
+            sortBy: "tokenId",
+            //@ts-ignore
+            sortDirection: "desc"
+    
   }
 
   setParams(tokensUrl, tokensQuery)
