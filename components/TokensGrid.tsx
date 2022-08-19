@@ -88,7 +88,7 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
             return (
               <div
                 key={`${token.contract}${token.tokenId}`}
-                className="group relative self-start border-2 border-[#000000] transition ease-in hover:border-[#6d6d6d] hover:ease-out dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600"
+                className="group bg-[url('/loading.gif')] bg-no-repeat bg-center relative self-start border-2 border-[#000000] transition ease-in hover:border-[#6d6d6d] hover:ease-out dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600"
               >
                 {/* {isInCart ? (
                   <div className="absolute top-4 right-4 z-10 flex h-[34px] w-[34px] animate-slide-down items-center justify-center overflow-hidden rounded-full bg-primary-700">
