@@ -20,24 +20,24 @@ const ConnectWalletModal: FC = () => {
         dispatch({ type: 'CONNECT_WALLET', payload: state })
       }
     >
-      <Dialog.Trigger className="btn-primary-fill dark:border-neutral-600  dark:text-white dark:ring-primary-900 dark:focus:ring-4">
+      <Dialog.Trigger className="btn-primary-fill font-pixeloid dark:border-neutral-600  dark:text-white dark:ring-primary-900 dark:focus:ring-4">
         Connect Wallet
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay>
-          <Dialog.Content className="fixed inset-0 z-[1000] bg-[#000000b6]">
+          <Dialog.Content className="font-pixeloid fixed inset-0 z-[1000] bg-[#000000b6]">
             <div className="fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform">
               <div className="px-5">
                 <div className="mx-auto rounded-2xl border border-neutral-300 bg-white py-11 shadow-xl dark:border-neutral-600 dark:bg-black md:w-[460px]">
                   <div className="mx-12 mb-4 flex items-center justify-between">
-                    <Dialog.Title className="reservoir-h4 font-headings dark:text-white">
+                    <Dialog.Title className="font-pixeloid reservoir-h4 dark:text-white">
                       Connect Wallet
                     </Dialog.Title>
                     <Dialog.Close className="btn-primary-outline p-1.5 dark:border-neutral-600 dark:text-white dark:ring-primary-900 dark:focus:ring-4">
                       <HiX className="h-5 w-5" />
                     </Dialog.Close>
                   </div>
-                  <div className="reservoir-body-2 my-8 mx-12 dark:text-white">
+                  <div className="font-pixeloid reservoir-body-2 my-8 mx-12 dark:text-white">
                     Choose your preferred wallet provider
                   </div>
                   <Wallets />

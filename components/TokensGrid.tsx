@@ -145,7 +145,7 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
                         />
                       </div>
                     )}
-                  <div className='absolute z-50 bottom-0 left-0 h-24 w-full bg-gradient-to-t from-black col-span-full invisible group-hover:visible '>
+                  <div className='absolute z-40 bottom-0 left-0 h-24 w-full bg-gradient-to-t from-black col-span-full invisible group-hover:visible '>
                   <div className='absolute text-xs invisible group-hover:visible bottom-5 left-3 h-2 w-8 font-pixeloid'>
                   <ENSName address={token?.owner}></ENSName>
                   </div>

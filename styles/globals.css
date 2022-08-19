@@ -42,3 +42,11 @@ model-viewer {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.btn-primary-outline{
+  border-radius: 4px;
+}
+
+.btn-primary-fill{
+  border-radius: 4px;
+}

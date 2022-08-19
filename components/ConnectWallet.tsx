@@ -34,7 +34,7 @@ const ConnectWallet: FC = () => {
 
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger className="btn-primary-outline ml-auto rounded-full border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4">
+      <DropdownMenu.Trigger className="btn-primary-outline dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4">
         <EthAccount
           address={account.address}
           ens={{
@@ -46,7 +46,7 @@ const ConnectWallet: FC = () => {
 
       <DropdownMenu.Content align="end" sideOffset={6}>
         <div
-          className={`w-48 space-y-1  bg-white px-1.5 py-2 shadow-md radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-56 ${
+          className={`w-48 space-y-1 font-pixeloid   bg-white px-1.5 py-2 shadow-md radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-56 ${
             DISABLE_POWERED_BY_RESERVOIR ? 'rounded' : 'rounded-t'
           }`}
         >
