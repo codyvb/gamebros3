@@ -104,7 +104,7 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
                   <a className="">
                   {token?.source && (
                     
-                    <div className='absolute z-50 top-0 left-0 h-24 w-full bg-gradient-to-b from-black to-background-opacity-0 col-span-full'>
+                    <div className='absolute z-40 top-0 left-0 h-24 w-full bg-gradient-to-b from-black to-background-opacity-0 col-span-full font-pixeloid'>
                                         <div className='absolute top-4 left-4 h-8 w-8 font-pixeloid'>Available! 
   
                       </div>

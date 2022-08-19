@@ -26,6 +26,7 @@ module.exports = {
         '4xl': '2560px',
       },
       fontFamily: {
+        pixeloid: ['"pixeloid"', 'sans-serif'],
         sans: [`"${BODY_FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
         headings: [`"${FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
         mono: [`"${MONO_FONT_FAMILY}"`, ...defaultTheme.fontFamily.mono],
