@@ -200,6 +200,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
             ))}
           </Tabs.List> */}
           <Tabs.Content value="items" asChild>
+            
             <>
               {/* <Sidebar attributes={attributes} setTokensSize={tokens.setSize} /> */}
               <div className="col-span-full sm:col-end-[-1] md:col-start-1">
@@ -250,7 +251,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                     />
                   </div>
                 </div>
-                <div className="mb-10 flex items-center justify-between">
+                <div className="mb-10 pl-10 pt-10 flex items-center justify-between">
                   <div>
                     <AttributesFlex className="flex flex-wrap gap-3" />
                     <ExploreFlex />
