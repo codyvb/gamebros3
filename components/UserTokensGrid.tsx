@@ -68,7 +68,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
             />
           </div>
         )}
-        <div className="mb-1 flex border-t border-[rgba(0,0,0,0.05)] p-3 dark:border-[rgba(255,255,255,0.1)]">
+        {/* <div className="mb-1 flex border-t border-[rgba(0,0,0,0.05)] p-3 dark:border-[rgba(255,255,255,0.1)]">
           <div className="relative mr-2 h-8 w-8 overflow-hidden">
             <img
               className="border-border-light dark: relative h-full w-full overflow-hidden rounded-full border object-cover after:absolute after:top-0 after:bottom-0 after:left-0  after:right-0 after:rounded-full after:bg-black after:content-[''] dark:border-[rgba(30,30,30,1)]"
@@ -83,8 +83,11 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
               {token?.token?.name || `#${token?.token?.tokenId}`}
             </p>
           </div>
-        </div>
-        <div className="flex items-center space-x-6 px-4 pb-4 lg:pb-3">
+        </div> */}
+        
+        {/* <div className="flex items-center space-x-6 px-4 pb-4 lg:pb-3"> */}
+
+        <div className="flex items-center">
           {token?.ownership?.floorAskPrice && (
             <div>
               <div className="text-xs  text-neutral-500 dark:text-neutral-400">
@@ -115,7 +118,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
             token?.ownership?.floorAskPrice && token?.token?.topBid?.value
           ) && (
             <div>
-              <div className="text-xs text-neutral-500 dark:text-neutral-400">
+              {/* <div className="text-xs text-neutral-500 dark:text-neutral-400">
                 Floor
               </div>
               <div className="reservoir-h6 dark:text-white">
@@ -123,7 +126,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
                   amount={token?.token?.collection?.floorAskPrice || 0}
                   logoWidth={7}
                 />
-              </div>
+              </div> */}
             </div>
           )}
         </div>

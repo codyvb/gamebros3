@@ -78,7 +78,7 @@ const Address: NextPage<Props> = ({ address, fallback }) => {
   const isOwner = address?.toLowerCase() === accountData?.address?.toLowerCase()
 
   let tabs = [
-    { name: 'Portfolio', id: 'portfolio' },
+    { name: 'Bros', id: 'portfolio' },
     // { name: 'History', id: 'history' },
   ]
 
@@ -93,25 +93,24 @@ const Address: NextPage<Props> = ({ address, fallback }) => {
 
   return (
     <Layout navbar={{}}>
+      <div className='mt-20 md:mt-40  col-span-full relative'></div>
       <Head>{metadata.title(`${address} Profile`)}</Head>
       <div className="col-span-full">
         <div className="mt-4 mb-4 w-full px-4 md:px-16">
           <div className="flex">
-            {address && (
-              <Avatar address={address} avatar={ensAvatar} size={80} />
-            )}
+
             <div className="ml-4">
-              <p className="reservoir-h6 text-xl font-semibold dark:text-white">
+              <p className="reservoir-h6 text-xl font-pixeloid dark:text-white">
                 {ensName || truncateAddress(address as string)}
               </p>
 
-              <p className="reservoir-label text-md font-semibold opacity-60">
+              <p className="reservoir-label text-md font-pixeloid opacity-60">
                 {truncateAddress(address as string)}
               </p>
             </div>
           </div>
         </div>
-        <div className="px-4 md:px-16">
+        <div className="px-4 font-pixeloid md:px-16">
           <Tabs.Root value={router.query?.tab?.toString() || 'portfolio'}>
             <Tabs.List className="mb-4 flex w-full overflow-hidden border-b border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.2)]">
               {tabs.map(({ name, id }) => (
