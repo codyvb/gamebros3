@@ -165,27 +165,30 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
         {description}
         {image}
       </Head>
-      <div className='mt-20 md:mt-40  col-span-full relative'></div>
-      <div className="col-span-full content-start space-y-4 px-2 md:col-span-4 lg:col-span-5 lg:col-start-2 lg:px-0 2xl:col-span-4 2xl:col-start-3 3xl:col-start-5 4xl:col-start-7">
+      <div className='mt-20 md:mt-40 font-pixeloid col-span-full relative'></div>
+      <div className="col-span-full font-pixeloid content-start space-y-4 px-2 md:col-start-2 md:col-span-6">
         <div className="mb-4">
           <TokenMedia details={details} tokenOpenSea={tokenOpenSea} />
         </div>
-        <div className="hidden space-y-4 md:block">
-          <CollectionInfo collection={collection} details={details} />
-          <TokenInfo details={details} />
+        <div className="hidden space-y-4 font-pixeloid md:block">
+          {/* <CollectionInfo collection={collection} details={details} /> */}
+          {/* <TokenInfo details={details} /> */}
         </div>
       </div>
-      <div className="col-span-full mb-4 space-y-4 px-2 md:col-span-4 md:col-start-5 lg:col-span-5 lg:col-start-7 lg:px-0 2xl:col-span-5 2xl:col-start-7 3xl:col-start-9 4xl:col-start-11">
+      <div className="col-span-full mb-4 space-y-4 px-2 md:col-span-4 md:col-start-5 lg:col-span-4">
         <Owner details={details} bannedOnOpenSea={bannedOnOpenSea} />
-        <PriceData details={details} collection={collection} />
+        {/* <PriceData details={details} collection={collection} /> */}
         <TokenAttributes
           token={token?.token}
           collection={collection.data?.collection}
         />
         <Listings asks={asks} />
+        <div className='hidden md:block'>
+        <TokenInfo details={details} />
+        </div>
       </div>
       <div className="col-span-full block space-y-4 px-2 md:hidden lg:px-0">
-        <CollectionInfo collection={collection} details={details} />
+        {/* <CollectionInfo collection={collection} details={details} /> */}
         <TokenInfo details={details} />
       </div>
     </Layout>

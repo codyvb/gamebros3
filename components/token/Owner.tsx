@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import { FiAlertCircle } from 'react-icons/fi'
+import {ENSName} from 'react-ens-name'
 
 type Props = {
   details: ReturnType<typeof useDetails>
@@ -20,9 +21,9 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea }) => {
 
   return (
     <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2">
-      <article className="col-span-full rounded-2xl border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
-        <div className="reservoir-h3 mb-6 flex items-center gap-4 overflow-hidden font-headings dark:text-white">
-          <div>{token?.token?.name || `#${token?.token?.tokenId}`}</div>
+      <article className="col-span-full border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
+        {/* <div className="reservoir-h3 mb-6 flex items-center gap-4 overflow-hidden font-pixeloid dark:text-white">
+          <div>{`#${token?.token?.tokenId}`}</div>
           {bannedOnOpenSea && (
             <Tooltip.Provider>
               <Tooltip.Root delayDuration={0}>
@@ -39,7 +40,7 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea }) => {
               </Tooltip.Root>
             </Tooltip.Provider>
           )}
-        </div>
+        </div> */}
 
         {/* {token?.token?.kind === 'erc1155' && (
           <div className="mb-4 flex justify-evenly">
@@ -54,13 +55,13 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea }) => {
           </div>
         )} */}
 
-        <div className="reservoir-h6 mb-2 font-headings dark:text-white">
-          Owner
+        <div className="reservoir-h6 mb-2 mr-2 font-pixeloid inline-block dark:text-white">
+          GameBro {`#${token?.token?.tokenId}`} held by
         </div>
         {owner && (
           <Link href={`/address/${owner}`}>
-            <a className="inline-block">
-              <EthAccount address={owner} side="left" />
+            <a className="inline-block font-pixeloid">
+            <ENSName address= {owner}></ENSName>
             </a>
           </Link>
         )}
