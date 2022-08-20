@@ -165,6 +165,7 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
         {description}
         {image}
       </Head>
+      <div className='mt-20 md:mt-40  col-span-full relative'></div>
       <div className="col-span-full content-start space-y-4 px-2 md:col-span-4 lg:col-span-5 lg:col-start-2 lg:px-0 2xl:col-span-4 2xl:col-start-3 3xl:col-start-5 4xl:col-start-7">
         <div className="mb-4">
           <TokenMedia details={details} tokenOpenSea={tokenOpenSea} />

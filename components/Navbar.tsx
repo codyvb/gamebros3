@@ -128,6 +128,7 @@ const Navbar: FC = () => {
       <HamburgerMenu externalLinks={externalLinks} />
       <div className="z-10 ml-auto hidden shrink-0 md:flex md:gap-2">
 
+
       <Link href={`https://discord.gg/bw8RmzKN`} passHref>
       <a target="_blank">
       <div className='btn-primary-outline px-2 dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4'>
@@ -152,6 +153,16 @@ const Navbar: FC = () => {
         </div>
         </a>
         </Link>
+
+
+        {/* <div className='btn-primary-outline dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4'>
+      Leaderboard
+      </div>
+
+      <div className='btn-primary-outline dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4'>
+      Merch
+      </div> */}
+
         <ConnectWallet />
         <ThemeSwitcher />
       </div>
