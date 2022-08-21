@@ -100,7 +100,7 @@ const TokenInfo: FC<Props> = ({ details }) => {
       </div>
       {token?.token?.contract && (
         <div className="mb-4 flex items-center justify-between">
-          <div className="reservoir-subtitle dark:text-white">
+          <div className="reservoir-subtitle font-pixeloid dark:text-white">
             Contract Address
           </div>
           <div>
@@ -117,19 +117,19 @@ const TokenInfo: FC<Props> = ({ details }) => {
         </div>
       )}
       <div className="mb-4 flex items-center justify-between">
-        <div className="reservoir-subtitle dark:text-white">Token ID</div>
+        <div className="reservoir-subtitle font-pixeloid dark:text-white">Token ID</div>
         <div className="reservoir-h6 max-w-[80px] truncate font-pixeloid dark:text-white">
           {token?.token?.tokenId}
         </div>
       </div>
       <div className="mb-4 flex items-center justify-between">
-        <div className="reservoir-subtitle dark:text-white">Token Standard</div>
+        <div className="reservoir-subtitle font-pixeloid dark:text-white">Token Standard</div>
         <div className="reservoir-h6 font-pixeloid  uppercase dark:text-white">
           {token?.token?.kind}
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <div className="reservoir-subtitle dark:text-white">
+        <div className="reservoir-subtitle font-pixeloid dark:text-white">
           Metadata Refresh
         </div>
         <button

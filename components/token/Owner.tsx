@@ -55,7 +55,7 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea }) => {
           </div>
         )} */}
 
-        <div className="reservoir-h6 mb-2 mr-2 font-pixeloid inline-block dark:text-white">
+        <div className="reservoir-h6 mr-2 font-pixeloid inline-block dark:text-white">
           GameBro {`#${token?.token?.tokenId}`} held by
         </div>
         {owner && (
