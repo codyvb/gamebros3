@@ -180,6 +180,39 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           {image}
         </Head>
         {/* <Hero collectionId={id} fallback={fallback} /> */}
+
+        <div className='relative flex justify-center items-center h-screen col-span-full md:bg-gradient-to-b from-black via-black to-gray-600 bg-center '>
+      
+      <div className="absolute child w-full h-full col-span-full flex bg-[url('/background.png')] bg-center bg-cover"></div>
+
+      <div className='md:items-center md:relative md:child md:flex md:justify-center p-10 '>
+
+      <div className='relative flex child col-span-full justify-center '>
+       <img src="/gb_head2.gif" alt="description of image" className='p-8 w-[300px] md:w-[400px]' ></img>
+
+      </div>
+
+      <div className='bg-slate-900 relative child md:w-[40%] p-8 justify-center  col-span-full text-xl font-pixeloid'>
+      A speedrun of video game history in 360 characters.
+      <div className='flex mt-4 text-lg font-pixeloid'>
+        360 Total - {stats?.data?.stats?.tokenCount} / 360
+      </div>
+      <div className="w-full md:w-3/4 mt-4 bg-gray-200 dark:bg-gray-700 border-2">
+      <div className="bg-white h-2.5 w-[52%]" ></div>
+      </div>
+      
+      <a href="https://twitter.com/gamebrosgg" rel="noreferrer" target="_blank">
+      <div className='bg-white text-black p-3 flex mt-4 text-lg font-pixeloid justify-center hover:bg-slate-700 hover:text-white'>
+       New Drops Every Week!
+      </div></a>
+      </div>
+      
+
+
+
+      </div>
+      </div>
+
         <Tabs.Root
           value={router.query?.tab?.toString() || 'items'}
           className="col-span-full grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 3xl:grid-cols-16 4xl:grid-cols-21"
@@ -204,7 +237,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
             <>
               {/* <Sidebar attributes={attributes} setTokensSize={tokens.setSize} /> */}
               <div className="col-span-full sm:col-end-[-1] md:col-start-1">
-                <div className="mb-20 hidden items-center justify-between md:flex">
+                <div className="hidden items-center justify-between md:flex">
                   <div className="hidden items-center gap-6">
                     {tokenCount > 0 && (
                       <>
@@ -251,7 +284,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                     />
                   </div>
                 </div>
-                <div className="mb-10 pl-10 pt-10 flex items-center justify-between">
+                <div className="pl-10 flex items-center justify-between">
                   <div>
                     <AttributesFlex className="flex flex-wrap gap-3" />
                     <ExploreFlex />
