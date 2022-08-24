@@ -27,12 +27,13 @@ const TokenMedia: FC<Props> = ({ details, tokenOpenSea }) => {
       {tokenOpenSea?.extension === null ? (
         <img
           className="w-full"
-          src={optimizeImage(token?.token?.image, 533)}
+          alt="Bro"
+          src={optimizeImage(token?.token?.image, 800)}
         />
       ) : (
         <Media
           tokenOpenSea={tokenOpenSea}
-          tokenImage={optimizeImage(token?.token?.image, 533)}
+          tokenImage={optimizeImage(token?.token?.image, 800)}
         />
       )}
     </div>
@@ -53,7 +54,7 @@ const Media: FC<{
   // VIDEO
   if (extension === 'mp4') {
     return (
-      <video className="mb-4 w-[533px]" controls>
+      <video className="mb-4 w-[800px]" controls>
         <source src={animation_url} type="video/mp4" />
         Your browser does not support the
         <code>video</code> element.
@@ -65,7 +66,7 @@ const Media: FC<{
   if (extension === 'wav' || extension === 'mp3') {
     return (
       <div>
-        <img className="mb-4 w-[533px] rounded-2xl" src={tokenImage} />
+        <img className="mb-4 w-[800px] rounded-2xl" src={tokenImage} />
         <audio className="mb-4 w-full" controls src={animation_url}>
           Your browser does not support the
           <code>audio</code> element.
@@ -100,8 +101,8 @@ const Media: FC<{
     return (
       <iframe
         className="mb-6 aspect-square w-full"
-        height="533"
-        width="533"
+        height="800"
+        width="800"
         src={animation_url}
         sandbox="allow-scripts"
       ></iframe>
