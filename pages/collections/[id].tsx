@@ -47,7 +47,7 @@ const envBannerImage = process.env.NEXT_PUBLIC_BANNER_IMAGE
 const RESERVOIR_API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
 const PROXY_API_BASE = process.env.NEXT_PUBLIC_PROXY_API_BASE
 
-const metaTitle = process.env.NEXT_PUBLIC_META_TITLE
+const metaTitle = "GameBros"
 const metaDescription = process.env.NEXT_PUBLIC_META_DESCRIPTION
 const metaImage = process.env.NEXT_PUBLIC_META_OG_IMAGE
 
