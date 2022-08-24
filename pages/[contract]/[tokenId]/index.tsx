@@ -192,7 +192,7 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
         <TokenInfo details={details} />
       </div>
 
-    <div className='mt-20 mb-20 md:mt-40 text-center font-pixeloid col-span-full relative'>
+    <div className='text-xs md:text-base mt-20 mb-20 md:mt-40 text-center font-pixeloid col-span-full relative'>
     GameBros 2022 - Made With ❤ from Bangkok
     </div>
 
