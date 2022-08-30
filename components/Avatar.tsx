@@ -23,7 +23,7 @@ const Avatar: FC<Props> = ({ address, avatar, size = 24 }) => {
       />
     </div>
   ) : (
-    <Jazzicon diameter={size} seed={jsNumberForAddress(address || '')} />
+    <div className=''></div>
   )
 }
 

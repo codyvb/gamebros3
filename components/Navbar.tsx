@@ -154,12 +154,12 @@ const Navbar: FC = () => {
         </a>
         </Link>
 
+          <Link href={'/about'} passHref>
+        <div className='btn-primary-outline cursor-pointer dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4'>
+      The Game
+      </div></Link>
 
-        {/* <div className='btn-primary-outline dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4'>
-      Leaderboard
-      </div>
-
-      <div className='btn-primary-outline dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4'>
+      {/* <div className='btn-primary-outline dark:bg-opacity-50 dark:hover:bg-opacity-75 border-0 font-pixeloid ml-auto border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4'>
       Merch
       </div> */}
 
