@@ -52,8 +52,10 @@ const About = () => {
 
        <Link href="https://twitter.com/gamebrosgg" target="_blank" passHref>
        <a target="_blank">
-         <div className='mt-10 p-4 md:w-3/4 bg-white font-pixeloid col-span-full text-center text-black cursor-pointer'>
+         <div className='mt-10 p-4 md:w-3/4 bg-white font-pixeloid col-span-full text-center text-black cursor-pointer hover:bg-gray-500'>
+       <div className='animate-pulse text-red-800'>
        Next Drop Alerts
+       </div>
        </div>
        </a></Link>
 
