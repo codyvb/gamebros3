@@ -214,12 +214,12 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
       </div>
       </div>
 
-      <div className='w-full p-5 col-span-full fixed grid z-50 bg-gradient-to-t from-black bottom-0 font-pixeloid  md:invisible'>  
-      <div className='justify-self-start child items-center flex pl-10 h-full absolute	'>
+      <div className='w-full p-6 col-span-full fixed grid z-50 bg-gradient-to-t from-black bottom-0 font-pixeloid md:px-16'>  
+      <div className='justify-self-start child items-center flex pl-10 h-full absolute md:pl-16	'>
       {stats?.data?.stats?.tokenCount} / 360
       </div>
       <Link href="/about" passHref>
-      <div className='p-3 bg-white child text-black relative justify-self-end	cursor-pointer'>
+      <div className='p-3 bg-white child text-black relative justify-self-end	cursor-pointer md:px-5'>
       Next Drop
       </div>
       </Link>
