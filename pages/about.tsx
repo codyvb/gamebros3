@@ -50,7 +50,7 @@ const About = () => {
       <div className="bg-white h-2.5 w-[58%]" ></div>
       </div>
 
-       <Link href="https://twitter.com/gamebrosgg" target="_blank" passHref>
+       <Link href="https://twitter.com/BKK_BROS" target="_blank" passHref>
        <a target="_blank">
          <div className='mt-10 p-4 md:w-3/4 bg-white font-pixeloid col-span-full text-center text-black cursor-pointer hover:bg-gray-500'>
        <div className='animate-pulse text-red-800'>
@@ -69,7 +69,7 @@ const About = () => {
 
         <div className='mt-5 col-span-full font-pixeloid text-2xl md:text-3xl md:w-3/4'>
           <text>
-          GameBros is a speedrun of video game history in 360 characters. All bros are unique, one of one creations from the artist <Link href="https://twitter.com/bkkbros"><a target="_blank">BKKBROS</a></Link>. 
+          GameBros is a speedrun of video game history in 360 characters. All bros are unique, one of one creations from the artist <Link href="https://twitter.com/BKK_BROS"><a target="_blank">BKKBROS</a></Link>. 
         </text>
         </div>
       </div>
