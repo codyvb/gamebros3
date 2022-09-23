@@ -286,7 +286,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                 </div>
                 <div className="pl-10 flex items-center justify-between">
                   <div>
-                    <AttributesFlex className="flex flex-wrap gap-3" />
+                    <AttributesFlex className="mb-10 mt-10 flex flex-wrap gap-3" />
                     <ExploreFlex />
                   </div>
                   {SOURCE_ID && (
