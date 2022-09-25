@@ -69,7 +69,7 @@ const About = () => {
 
         <div className='mt-5 col-span-full font-pixeloid text-2xl md:text-3xl md:w-3/4'>
           <text>
-          GameBros is a speedrun of video game history in 360 characters. All bros are unique, one of one creations from the artist <Link href="https://twitter.com/BKK_BROS"><a target="_blank">BKKBROS</a></Link>. 
+          GameBros is a speedrun of video game history in 360 bros. All bros are unique, one of one creations from the artist <Link href="https://twitter.com/BKK_BROS"><a target="_blank">BKKBROS</a></Link>. 
         </text>
         </div>
       </div>
