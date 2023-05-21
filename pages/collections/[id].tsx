@@ -182,7 +182,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
         </Head>
         {/* <Hero collectionId={id} fallback={fallback} /> */}
 
-        <div className='relative flex justify-center h-screen col-span-full md:bg-gradient-to-b from-black via-black to-gray-600 bg-center '>
+        <div className='relative flex justify-center h-[80vh] col-span-full md:bg-gradient-to-b from-black via-black to-gray-600 bg-center '>
       
       <div className="absolute child w-full h-full col-span-full flex bg-[url('/background.png')] bg-center bg-cover"></div>
 
